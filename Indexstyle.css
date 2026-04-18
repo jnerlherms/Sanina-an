@@ -1,0 +1,163 @@
+
+    :root {
+      --green: #254F22;
+      --rust:  #A03A13;
+      --peach: #F5824A;
+      --linen: #EDE4C2;
+      --paper: #f7f2e6;
+      --ink:   #1c2b1a;
+      --muted: #6b8c68;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--linen);
+      color: var(--ink);
+    }
+
+
+    nav {
+      background: var(--green);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+      position: sticky; top: 0; z-index: 50;
+      box-shadow: 0 3px 0 var(--rust);
+    }
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--linen);
+    }
+    .nav-brand em { color: var(--peach); font-style: italic; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--linen);
+      text-decoration: none;
+      opacity: 0.75;
+      transition: opacity 0.15s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-cta {
+      background: var(--peach) !important;
+      color: var(--ink) !important;
+      padding: 7px 16px;
+      border-radius: 2px;
+      opacity: 1 !important;
+      font-weight: 500 !important;
+      box-shadow: 2px 2px 0 var(--rust);
+    }
+    .nav-cta:hover { filter: brightness(1.05); }
+
+    .hero {
+      background: var(--green);
+      padding: 150px 40px 300px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-eyebrow {
+      font-size: 0.62rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--peach);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 700;
+      color: var(--linen);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+    .hero h1 em { color: var(--peach); font-style: italic; }
+    .hero p {
+      font-size: 0.9rem;
+      color: var(--linen);
+      opacity: 0.75;
+      max-width: 480px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      padding: 12px 28px;
+      background: var(--peach);
+      color: var(--ink);
+      border: none; border-radius: 2px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 3px 3px 0 var(--rust);
+      cursor: pointer;
+      transition: filter 0.15s, transform 0.1s;
+      display: inline-block;
+    }
+    .btn-primary:hover { filter: brightness(1.05); }
+    .btn-primary:active { transform: translateY(2px); box-shadow: 1px 1px 0 var(--rust); }
+    .btn-outline {
+      padding: 12px 28px;
+      background: transparent;
+      color: var(--linen);
+      border: 1.5px solid rgba(237,228,194,0.35);
+      border-radius: 2px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem; font-weight: 400;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--linen); background: rgba(237,228,194,0.08); }
+
+    
+
+    footer {
+      background: var(--ink);
+      padding: 28px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--linen);
+    }
+    .footer-brand em { color: var(--peach); font-style: italic; }
+    .footer-copy {
+      font-size: 0.62rem; color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .flex-wrapper {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 560px) {
+      nav { padding: 0 20px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { padding: 60px 24px 56px; }
+      .section, .why-section { padding: 52px 24px; }
+      .listings-section { padding: 52px 24px; }
+      .stats { gap: 28px; padding: 20px 24px; }
+    }
