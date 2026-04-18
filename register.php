@@ -1,6 +1,6 @@
 <?php
 session_start();
-$con = mysqli_connect("127.0.0.1:3306", "root", "", "projectsanina'an") 
+$con = mysqli_connect("127.0.0.1:3306", "root", "", "sanina'an")
        or die("Connection Error");
 
 $str = "";
@@ -26,7 +26,7 @@ if (isset($_POST['btn'])) {
         if ($stmt->execute()) {
             $_SESSION['uname'] = $Username;
             $_SESSION['pwd'] = $Password;
-            header("Location: login.php");
+            header("Location: location.php");
             exit();
         } else {
             $str = "Registration failed: " . $stmt->error;

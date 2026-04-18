@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $con = mysqli_connect("127.0.0.1:3306", "root", "", "projectsanina'an") 
+  $con = mysqli_connect("127.0.0.1:3306", "root", "", "sanina'an")
          or die("Connection Error");
 
     if (!isset($_SESSION['user_id'])) {
@@ -26,7 +26,7 @@
       <a href="add_new_record.php" class="nav-cta">Add to Cart</a>
       <a href="#" class="nav-cta">Location</a>
       <a href="#" class="nav-cta">Orders</a>
-      <a href="logout.php" class="nav-cta">Log Out</a>
+      <a href="login.php" class="nav-cta">Log Out</a>
     </div>
   </nav>
 

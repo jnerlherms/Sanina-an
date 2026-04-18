@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $con = mysqli_connect("127.0.0.1:3306", "root", "", "projectsanina'an") 
+  $con = mysqli_connect("127.0.0.1:3306", "root", "", "sanina'an")
        or die("Connection Error");
 
   $str="";
@@ -35,6 +35,7 @@
   }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="ceb">
 <head>
