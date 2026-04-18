@@ -23,9 +23,9 @@
   <nav>
     <div class="nav-brand">Sanina<em>'</em>an</div>
     <div class="nav-links">
-      <a href="add_new_record.php" class="nav-cta">Add to Cart</a>
-      <a href="#" class="nav-cta">Location</a>
-      <a href="#" class="nav-cta">Orders</a>
+      <a href="add_new_record.php" class="nav-cta">My Cart</a>
+      <a href="#" class="nav-cta">My Address</a>
+      <a href="#" class="nav-cta">Order History</a>
       <a href="login.php" class="nav-cta">Log Out</a>
     </div>
   </nav>
